@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Fact</title>
+    <h1>Displaying the Factorial</h1>
+    <button onclick="input()">Enter the no.</button>
+
+    <script>
+        function input(){
+            var a=prompt("enter the first no.");
+            facto(a);
+        };
+        function facto(a){
+            let output=1;
+            for(let i=a;i>=1;i--){
+                output=output*i;
+            }
+            alert("factorial ="+output);
+        }
+
+        
+    </script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

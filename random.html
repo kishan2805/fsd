@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <title>Guess Game</title>
+    <h2>Welcome to guess game </h2>
+    <button onclick="guesss()">enter to try your luck</button>
+    <script>
+        function guesss(){
+            var a=prompt("enter the number ");
+            generateRandomNumber(a);
+
+        }
+        function generateRandomNumber(a) {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            if (a==randomNumber){
+                alert("yuppppp!")
+            }
+            else{
+                alert("not your day ")
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
