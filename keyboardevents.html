@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>keyboard events</title>
+</head>
+<body>
+
+    <h2>now we will start </h2><br>
+    <input type="text" id="inputbox" placeholder="write my friend ">
+    <div id="op">press any key</div>
+    <script>
+        const ib=document.getElementById("inputbox");
+        const output=document.getElementById("op");
+
+        // keydown
+        ib.onkeydown=function(event){
+            output.innerHTML="key down"+event.key;
+        }
+        // key up
+        ib.onkeyup=function(event){
+            output.innerHTML="key up"+event.key;
+        }
+        // on key press
+        ib.onkeypress=function(event){
+            output.innerHTML="presed key "+event.key;
+        }
+    </script>
+    
+</body>
+</html>
