@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Mouse Events</title>
+    <style>
+        #mb{
+            width: 200px;
+            height: 250px;
+            background-color: aquamarine;
+            border:solid black 2px;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 20%;
+        };
+    </style>
+</head>
+<body>
+    <div id="mb">move in buddy </div>
+    <script>
+        const box=document.getElementById("mb");
+        // mouse click event
+        box.onclick=function(){
+            box.innerHTML="box clicked";
+            box.style.backgroundColor="green";
+        }
+        // mouse over 
+        box.onmouseover=function(){
+            box.innerHTML="mouse over";
+            box.style.backgroundColor="red";
+        }
+        // mouse out 
+        box.onmouseout=function(){
+            box.innerHTML="mouse out";
+            box.style.backgroundColor="aquamarine";
+        }
+        // mouse down
+        box.onmousedown=function(){
+            box.style.backgroundColor="yellow";
+            box.innerHTML="mouse down";
+        }
+        // on mouse up 
+        box.onmouseup=function(){
+            box.style.backgroundColor="orange";
+            box.innerHTML="mouse up";
+        }
+        // on mouse double click 
+        box.ondblclick=function(){
+            box.style.backgroundColor="blue";
+            box.innerHTML="double click";
+        }
+
+
+    </script>
+
+
+
+    
+</body>
+</html>
+
+
