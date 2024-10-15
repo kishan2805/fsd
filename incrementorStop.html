@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>PROBLEM 1</title>
+    
+</head>
+<body>
+    <p id="msg">0</p>
+    <button onclick="incre()">increase</button>
+    <button onclick="stop()">STOP!!</button>
+
+    <script>
+        let flag=true;
+        let counter=0;
+        
+        
+        function incre(){
+            if(flag){
+                counter++;
+        // ("counter = "+counter);
+                document.getElementById("msg").innerHTML=counter;
+                
+            }   
+        }
+        
+        function stop(){
+            flag=false;
+            // alert("counter = "+counter);
+            document.getElementById("msg").innerHTML=counter;
+            
+        }
+        
+    </script>
+ 
+</body>
+</html>
