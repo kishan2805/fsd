@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+   
+    <title>Mouse Over
+    </title>
+    <style>
+        #mb{
+            width: 200px;
+            height: 250px;
+            background-color: aquamarine;
+            border:solid black 2px;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 20%;
+        };
+    </style>
+</head>
+<body>
+    <center>
+        <div  id="mb">move in buddy </div>
+        <script>
+        const box=document.getElementById("mb");
+            box.onmouseover=function(){
+                box.innerHTML="mouse over";
+                box.style.backgroundColor="red";
+            }
+        </script>
+    </center>
+    
+   
+    
+</body>
+</html>

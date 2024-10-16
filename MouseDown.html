@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Down</title>
+    <style>
+        #mb{
+            width: 200px;
+            height: 250px;
+            background-color: aquamarine;
+            border:solid black 2px;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 20%;
+        };
+    </style>
+</head>
+<body>
+    <center>
+        <div id="mb">mouse is still out </div>
+        <script>
+            const box=document.getElementById("mb")
+            box.onmousedown=function(){
+                box.innerHTML="Mouse Down"
+                box.style.background="Blue"
+            }
+        </script>
+    </center>
+    
+</body>
+</html>
