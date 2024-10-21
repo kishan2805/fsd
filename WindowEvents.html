@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events</title>
+    <br><br>
+    <h2>Window Events Demo</h2>
+</head>
+<body>
+    <div class="info" id="info"> page stattus</div>
+    <script>
+        const infodiv=document.getElementById('info')
+        // event : window load 
+        window.addEventListener('load' , function(){
+            infodiv.textContent='Page loaded'
+            infodiv.style.color="green"
+        })
+        window.addEventListener('resize' , function(){
+            infodiv.textContent='Page resized'
+            infodiv.style.color="green"
+        })
+        window.addEventListener('scroll' , function(){
+            infodiv.textContent='Page scrolling'
+            infodiv.style.color="green"
+        })
+    </script>
+</body>
+</html>

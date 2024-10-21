@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormEvents</title>
+    <br><br><br>
+    <h3>Form Events Demo</h3>
+    <form id="form">
+        <label for="">Name:</label>
+        <input type="text" name="" id="name1" placeholder="enter name">
+        <br><br>
+        <label for="">Email</label>
+        <input type="text" id="email1" placeholder="enter email">
+        <br><br>
+        <button type="submit">Submit </button>
+    </form>
+</head>
+<body>
+    <p id="status"></p>
+    <script>
+        const f1=document.getElementById("form")
+        const nameinput=document.getElementById("name1")
+        const emailinput=document.getElementById("email1")
+        const sta=document.getElementById("status")
+
+        // focus event
+        nameinput.addEventListener('focus' , function(){
+            sta.textContent="name in focus"
+            sta.style.color="blue"
+        });
+        emailinput.addEventListener('focus' , function(){
+            sta.textContent="email in focus"
+            sta.style.color="green"
+        })
+
+
+        // blur event
+        nameinput.addEventListener('blur' , function(){
+            sta.textContent="name out of focus"
+            sta.style.color="red"
+        })
+        emailinput.addEventListener('blur' , function(){
+            sta.textContent="email out of focus"
+            sta.style.color="orange"
+        })
+
+        // submit event
+        f1.addEventListener('submit' , function(){
+            event.preventDefault();
+            const nameval=nameinput.value;
+            const emailval=emailinput.value;
+
+            if(nameval===""|| emailval===''){
+                sta.textContent="please fill out both fields";
+                sta.style.color="red"
+            }
+            else{
+                sta.textContent="form submitted with name : "+nameval+ " and email : "+emailval;
+                sta.style.color="green"
+            }
+        }) 
+
+
+
+    </script>
+
+    
+</body>
+</html>
