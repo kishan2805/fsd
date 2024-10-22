@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>DOM Accessing </title>
+    <br><br>
+    <h1 id="element">hii</h1>
+    <p class="classselector">item 1 </p>
+    <p class="classselector">item 2 </p>
+    <br><br>
+    <p>No change is to be done </p>
+    <br><br>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <button id="changetextbutton">change contents </button>
+
+</head>
+<body>
+    <script>
+        const ele=document.getElementById('element')
+        ele.style.color='red'
+
+        const classsele=document.getElementsByClassName('classselector')
+        for(let i=0;i<classsele.length;i++){
+            classsele[i].style.color='blue'
+        }
+
+        const listitem=document.getElementsByTagName('li')
+        for(let i=0;i<listitem.length;i++){
+            listitem[i].style.textTransform='uppercase'
+        }
+        const f1=document.querySelector('p')
+        f1.style.backgroundColor='green'
+
+        const fAll=document.querySelectorAll('ul li')
+        fAll.forEach(item=>{
+            item.style.marginLeft='200px'
+        });
+    </script>
+    
+</body>
+</html>
