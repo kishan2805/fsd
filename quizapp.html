@@ -1,0 +1,96 @@
+<!-- create a simple quiz app using js  -->
+<!-- atleast 3 quest and 4 options validate the user answer and display the score at the end -->
+<!DOCTYPE html>
+<head>
+    <title>Quiz App</title>
+
+    <h2>Welcome to Brain Teaser </h2> <br><br>
+    <div id="qu1">
+        <h4>Question 1</h4><br>
+        <label >what is the capital of India ??</label>
+        <br><br>
+        <label for="option1">
+            <input type="radio" id="option1" name="q1" value="kolkata">
+            kolkata
+        </label>
+        <br>
+        <label for="option2">
+            <input type="radio" id="option2" name="q1" value="mumbai">
+            mumbai
+        </label>
+        <br>
+        <label for="option3">
+            <input type="radio" id="option3" name="q1" value="delhi">
+            delhi
+        </label><br>
+    </div>
+    
+    <div id="qu2">
+        <h4>Question 2</h4><br>
+        <label >what is 2+2 ?</label>
+        <br>
+        <label for="22">
+            <input type="radio" id="option1" name="q2" value="22">
+            22
+        </label><br>
+        <label for="4">
+            <input type="radio" id="option2" name="q2" value="4">
+            4
+        </label><br>
+        <label for="41.78">
+            <input type="radio" id="option3"  name="q2" value="41.78">
+            41.78
+        </label><br>
+    </div>
+    <br><br>
+
+    <div id="qu3">
+        <h4>Question 3</h4><br>
+        <label >what is my name ?</label>
+        <br>
+        <label for="option1">
+            <input type="radio" id="option1"  name="q3" value="kishan">
+            kishan
+        </label><br>
+        <label for="option2">
+            <input type="radio" id="option2" name="q3" value="kumar" >
+            kumar
+        </label><br>
+        <label for="option3">
+            <input type="radio" id="option3" name="q3" value="jaiswal">
+            jaiswal
+        </label><br>
+    </div>
+    <br><br>
+
+    <button type="reset" onclick="score()">check score </button>
+    
+
+</head>
+<body>
+    <script>
+        
+        function score(){
+            var count=0;
+            var a1=document.querySelector('input[name="q1"]:checked')
+            
+            var a2=document.querySelector('input[name="q2"]:checked')
+            var a3=document.querySelector('input[name="q3"]:checked')
+
+            if( a1.value==="delhi"){
+                count++;
+            }
+            if( a2.value==="4"){
+                count++;
+            }
+            if( a3.value==="kishan"){
+                count++;
+            }
+            alert('your score is : '+count)
+        }
+
+    </script>
+
+    
+</body>
+</html>

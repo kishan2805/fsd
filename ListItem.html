@@ -1,0 +1,66 @@
+ <!-- write a js prog to create a list of items on a web page , include buttons : add , remove , create -->
+ <!-- display the list dynamically on the web page as in when items are added and removed -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dynamic List Item</title>
+
+ </head>
+ <body>
+ 
+     <h2>Dynamic List</h2>
+ 
+     <input type="text" id="itemInput" placeholder="Enter item" />
+ 
+     <button onclick="createList()">Create List</button>
+     <button onclick="addItem()">Add Item</button>
+     <button onclick="removeItem()">Remove Item</button>
+ 
+     <div id="listcon"></div>
+ 
+     <script>
+         let list; 
+ 
+         
+         function createList() {
+             const existingList = document.getElementById('itemList');
+             if (existingList) {
+                 existingList.remove();
+             }
+ 
+             list = document.createElement('ul'); 
+             list.id = 'itemList'; 
+             document.getElementById('listcon').appendChild(list); 
+         }
+ 
+         
+         function addItem() {
+             const itemInput = document.getElementById('itemInput').value; 
+ 
+             if (itemInput === '') {
+                 alert("Please enter an item to add.");
+                 return; 
+             }
+ 
+             const listItem = document.createElement('li');
+             listItem.textContent = itemInput; 
+             list.appendChild(listItem); 
+ 
+             document.getElementById('itemInput').value = ''; 
+         }
+ 
+
+         function removeItem() {
+             if (list && list.lastElementChild) {
+                 list.removeChild(list.lastElementChild); 
+             } else {
+                 alert("No items to remove."); 
+             }
+         }
+     </script>
+ 
+ </body>
+ </html>
+ 

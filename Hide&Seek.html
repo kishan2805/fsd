@@ -1,0 +1,30 @@
+<!-- write a js pro. to toggle the visibility of a <p> on the web page when the user clicks a button -->
+<!-- the text should be either visible or hidden also the button should display show text or hide text based on curr state  -->
+<!DOCTYPE html>
+<head>
+    <title>Hide & Seek </title>
+    <br><br>
+    <p id="game">Lets try out hide and seek </p>
+    <button id="button" onclick="hideseek()">Hide </button>
+</head>
+<body>
+    <script>
+        function hideseek(){
+            const para=document.getElementById('game')
+            const status=document.getElementById('button')
+            // display when hidden 
+            if (para.style.display === "none") {
+                para.style.display = "inline";
+                status.textContent = "Hide";
+            } 
+            // hide when displayed 
+            else {
+                para.style.display = "none";
+                status.textContent = "Show ";
+            }
+        }
+    </script>
+   
+</body>
+
+</html>
