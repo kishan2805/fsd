@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Body and Button Events</title>
+    <script>
+        // Function to handle body click event
+        function handlebodyevents() {
+            alert("Body was clicked");
+        }
+
+        // Function to handle button click event
+        function handlebuttonevents() {
+            alert("Button was pressed");
+        }
+
+        // Add event listener for the button
+        window.onload = function() {
+            document.getElementById("buttonevent").addEventListener("click", handlebuttonevents);
+        }
+    </script>
+</head>
+<body onclick="handlebodyevents()">
+    <h1>Click and see the change</h1>
+    <button id="buttonevent">Click me</button>
+</body>
+</html>
